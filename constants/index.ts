@@ -107,7 +107,45 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
     },
     image: ["/assets/image2.png", "/assets/image3.png", "/assets/image4.png", "/assets/image5.png"],
     discount: "",
-    description: "Experience the ultimate luxury in this stunning villa with breathtaking ocean views, a private pool, and top-notch amenities. Perfect for a relaxing getaway.",
+    description: "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When youre ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    placeOffer: {
+      icon: ["/assets/mountain1.svg", "/assets/chef1.svg", "/assets/broom1.svg", "/assets/pool1.svg", "/assets/pan1.svg", "/assets/sunrise1.svg", "/assets/bell1.svg", "/assets/shaker1.svg", "/assets/hot-tub1.svg", "/assets/wifi1.svg"],
+      text: ["Mountain view", "Chef", "Cleaning available during stay", "Pool - infinity", "Kitchen", "Shared beach access", "Butler", "Bartender", "Hot Tub", "WiFi"]
+    },
+    reviews: [  
+      {
+        avatar: "/assets/image25.png",
+        name: "Kerry",
+        data: "March 2024",
+        years: 3,
+        rating: 5,
+        comment: "I simply dont have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
+      },
+      {
+        avatar: "/assets/image25-1.png",
+        name: "Cindy & Ben",
+        data: "August 2023",
+        years: 1,
+        rating: 5,
+        comment: "I simply dont have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
+      },
+      {
+        avatar: "/assets/image25-2.png",
+        name: "Pooja",
+        data: "March 2024",
+        years: 1,
+        rating: 5,
+        comment: "I simply dont have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
+      },
+      {
+        avatar: "/assets/image25-3.png",
+        name: "Marnie",
+        data: "January 2023",
+        years: 5,
+        rating: 5,
+        comment: "I simply dont have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
+      },
+    ]
   },
 
 

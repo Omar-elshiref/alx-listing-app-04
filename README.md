@@ -78,3 +78,67 @@ Objective:
 In this milestone, you will implement the Booking Detail Page based on the provided mockup. The page should allow users to enter their contact and payment details, review their booking information, and confirm the booking. This page will be responsive and styled using Tailwind CSS.
 
 By the end of this milestone, you will have created a functional and responsive booking page where users can input details and proceed with the booking process.
+
+
+
+ده كمبونبنت الاصلي 
+
+import { PROPERTYLISTINGSAMPLE } from "@/constants/index";
+import { useRouter } from "next/router";
+import PropertyDetail from "@/components/property/PropertyDetail";
+
+export default function PropertyPage() {
+  const router = useRouter();
+  const { id } = router.query;
+  const property = PROPERTYLISTINGSAMPLE.find(
+    (item) => String(item.id) === String(id)
+  );
+
+  if (!property) return <p>Property not found</p>;
+
+  return (
+    <div>
+      <PropertyDetail property={property} />
+    </div>
+  );
+}
+
+عايز اضيف مكتبه axois وخليه كده 
+
+import { useRouter } from "next/router";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import PropertyDetail from "@/components/property/PropertyDetail";
+
+export default function PropertyDetailPage() {
+  const router = useRouter();
+  const { id } = router.query;
+  const [property, setProperty] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProperty = async () => {
+      if (!id) return;
+      try {
+        const response = await axios.get(`/api/properties/${id}`);
+        setProperty(response.data);
+      } catch (error) {
+        console.error("Error fetching property details:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProperty();
+  }, [id]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!property) {
+    return <p>Property not found</p>;
+  }
+
+  return <PropertyDetail property={property} />;
+}
